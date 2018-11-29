@@ -13,7 +13,8 @@ app_1_1f5040954a31 | [29-Nov-2018 09:48:53] NOTICE: ready to handle connections
 database_1_16cdb9c0c03c | LOG:  database system was shut down at 2018-11-29 09:48:35 UTC
 database_1_16cdb9c0c03c | LOG:  MultiXact member wraparound protections are now enabled
 database_1_16cdb9c0c03c | LOG:  database system is ready to accept connections
-database_1_16cdb9c0c03c | LOG:  autovacuum launcher started```
+database_1_16cdb9c0c03c | LOG:  autovacuum launcher started
+```
 
 Con esto ya nuestros contenedores estan funcionando.
 
