@@ -17,6 +17,11 @@ Route::get('/', function () {
     return View::make('index');
 });
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{any?}', function () {
+    View::addExtension('html', 'php');
+    return View::make('index');
+});

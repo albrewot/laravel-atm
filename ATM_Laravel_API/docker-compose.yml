@@ -10,8 +10,11 @@ services:
     volumes:
       - ./:/var/www
     environment:
-      - "DB_PORT=3306"
+      - "DB_PORT=5432"
       - "DB_HOST=database"
+    # ports:
+    #   - 8080:80
+
 
   # The Web Server
   web:
@@ -26,16 +29,15 @@ services:
 
   # The Database
   database:
-    image: mysql:8.0
+    image: postgres:9.5.15
     volumes:
-      - dbdata:/var/lib/mysql
+      - dbdata:/var/lib/postgresql
     environment:
-      - "MYSQL_DATABASE=homestead"
-      - "MYSQL_USER=homestead"
-      - "MYSQL_PASSWORD=secret"
-      - "MYSQL_ROOT_PASSWORD=secret"
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
     ports:
-        - "33061:3306"
+        - "54321:5432"
 
 volumes:
   dbdata:
