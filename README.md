@@ -21,8 +21,11 @@ Con esto ya nuestros contenedores estan funcionando.
 Si ya las imagenes estan generadas se puede correr en la consola `docker-compose up` y utilizara las imagenes que estan en la cache de docker
 
 Luego abrir otra consola y correr los siguientes comandos 
+
 `docker-compose exec app composer install` SIRVE PARA INSTALAR LAS DEPENDENCIAS DE LARAVEL
+
 `docker-compose exec app php artisan migrate:fresh` SIRVE PARA MIGRAR LAS BASES DE DATOS A POSTGRES
+
 `docker-compose exec app php artisan db:seed` SIRVE PARA CREAR 3 USUARIOS NUEVOS
 
 Luego se puede acceder a la app desde `localhost:8080`
